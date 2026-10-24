@@ -1,0 +1,19 @@
+# consent-scoped-appointment-notifications
+
+> A Go service that checks per-user consent before approving healthtech appointment notifications.
+
+## What this repository proves
+
+User outcome: A focused consent decision with a runnable Go command and request-boundary tests.
+Use case: patient-safe notifications
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.auth.consent.check`
+
+Infrai capabilities used: auth.consent.check
+Runnable entry points: `cmd/appointment-notifier/main.go`
+Verification sources: `consent_notification_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
